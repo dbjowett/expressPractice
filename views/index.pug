@@ -1,0 +1,17 @@
+
+extends layouts/layout.pug
+
+block content
+    head 
+        h1 Hello World
+
+        .main-content
+            p Click on the button to add a new user 
+                button 
+                    a(href="/add-user") Add
+        main
+            h1 Current Users
+                each user in usernames
+                    div 
+                        h4 Username
+                            div.user #{user.user}

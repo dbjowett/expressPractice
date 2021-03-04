@@ -1,0 +1,12 @@
+extends layouts/layout.pug
+
+block content
+    head 
+        h1 Add User
+
+        .main-content
+            p Enter a new username
+            form.form(action="/users", method="POST")
+                label(for="title") Enter name
+                input(type="name", name="user")
+                button(type="submit") submit
